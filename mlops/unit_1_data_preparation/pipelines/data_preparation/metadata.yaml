@@ -30,6 +30,7 @@ blocks:
       path: unit_1_data_preparation/transformers/prepare.py
   downstream_blocks:
   - prepare_histogram_w4
+  - build
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -42,6 +43,24 @@ blocks:
   upstream_blocks:
   - ingest
   uuid: prepare
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/data_exporters/build.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Build
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - prepare
+  uuid: build
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
