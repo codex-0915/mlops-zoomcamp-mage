@@ -60,7 +60,8 @@ blocks:
   configuration:
     file_source:
       path: unit_1_data_preparation/transformers/hyper_parameter_tuning/sklearn.py
-  downstream_blocks: []
+  downstream_blocks:
+  - sklearn
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -74,6 +75,24 @@ blocks:
   - training_set
   - load_models
   uuid: hyper_parameter_tuning/sklearn
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/data_exporters/sklearn.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sklearn
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hyper_parameter_tuning/sklearn
+  uuid: sklearn
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
