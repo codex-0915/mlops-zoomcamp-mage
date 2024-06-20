@@ -1,4 +1,12 @@
 blocks:
+  daring_snowflake:
+    name: daring snowflake
+    type: chart
+    uuid: daring_snowflake
+  fantastic_oracle:
+    name: fantastic oracle
+    type: chart
+    uuid: fantastic_oracle
   shap_values:
     configuration:
       chart_type: custom
@@ -48,4 +56,8 @@ layout:
     height: 400
     width: 1
 - - block_uuid: shap_values_force_chart
+    width: 1
+- - block_uuid: daring_snowflake
+    width: 1
+- - block_uuid: fantastic_oracle
     width: 1
